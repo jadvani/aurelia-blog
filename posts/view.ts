@@ -6,7 +6,7 @@ import { PostService } from '../common/services/post-service';
 export class View {
 
   error: string;
-  post: any[];
+  post: any;
 
   constructor(private postService: PostService) {
 
@@ -18,6 +18,8 @@ export class View {
         this.error = data.error;
       }
       else {
+        console.log('post', data);
+        
         this.post=data.post;
       }
     });

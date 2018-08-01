@@ -1,5 +1,8 @@
 <template>
-
-  <router-view></router-view>
-
+    <h2 class="blog-post-title">${post.title}</h2>
+    <p class="blog-post-meta">${post.createdAt}
+      <br> created by
+      <a href="#">${post.author}</a>
+    </p>
+    <p>${post.body}</p>
 </template>
