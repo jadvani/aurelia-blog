@@ -3,9 +3,10 @@ import {AuthService} from './auth-service';
 
 @inject(AuthService)
 export class PostService {
+  delay: number;
+  posts: any[];
 
-	constructor(AuthService) {
-		this.authService = AuthService;
+	constructor(private authService: AuthService) {
 		// Fake a server response delay
 		this.delay = 100;
 		// Seed post data if it doesn't exist
@@ -38,7 +39,7 @@ export class PostService {
 			]
 		}
 	}
-
+ 
 	allPostPreviews() {
 		return new Promise((resolve, reject) => {
 		  setTimeout(() => {
