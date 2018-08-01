@@ -8,6 +8,7 @@ export class View {
   error: string;
   post: any;
 
+
   constructor(private postService: PostService) {
 
   }

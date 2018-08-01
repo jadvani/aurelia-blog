@@ -1,18 +1,18 @@
 import { App } from './../app';
 import { inject } from 'aurelia-framework';
 import { PostService } from 'common/services/post-service';
+import {EventAggregator} from 'aurelia-event-aggregator';
 
-@inject(PostService)
+@inject(PostService,EventAggregator)
 export class Index {
   message: string;
   myPostPreviews: any[];
 
-  constructor(private postService: PostService) {
+  constructor(private postService: PostService, private ea: EventAggregator) {
   }
 
 
   attached() {
-
 
     this.postService.allPostPreviews()
       .then((data: any) => {
@@ -21,9 +21,8 @@ export class Index {
           //handle errors
         }
         else {
-          this.postService.posts = data.posts;
-          this.myPostPreviews = this.postService.posts;
-          console.log(this.postService.posts);
+          this.myPostPreviews = data.posts;
+          console.log('posts en index', this.postService.posts);
         }
 
       })
@@ -31,6 +30,10 @@ export class Index {
         console.error(err.message);
 
       });
+
   }
+
+
+
 
 }

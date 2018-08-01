@@ -7,6 +7,7 @@
           <p class="blog-post-meta">${post.createdAt}
             <br> created by
             <a href="#">${post.author}</a>
+            <p>tags: ${post.tags}</p>
           </p>
           <p>${post.body}</p>
           <a route-href="route: post-view; params.bind: {slug: post.slug}">Continue Reading...</a>
