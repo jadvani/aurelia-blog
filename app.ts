@@ -12,7 +12,8 @@ export class App {
   
     config.title = 'Pureza Flamenca';
     config.map([
-      { route: '', name: 'home', moduleId: PLATFORM.moduleName('./posts/index'), title: 'Home' }
+      { route: '', name: 'home', moduleId: PLATFORM.moduleName('./posts/index'), title: 'Home' },
+      { route: 'post/:slug', name: 'post-view', moduleId: PLATFORM.moduleName('./posts/view'), title: 'Post View' },
     ]);
   }
 }
