@@ -1,8 +1,9 @@
 <template>
-    <h2 class="blog-post-title">${post.title}</h2>
-    <p class="blog-post-meta">${post.createdAt}
-      <br> created by
-      <a href="#">${post.author}</a>
-    </p>
-    <p>${post.body}</p>
+  <require from="../resources/elements/blog-post"></require>
+  <div class="alert alert-danger" if.bind="error">${error}</div>
+
+
+  <blog-post post.bind="post"></blog-post>
+
+  </div>
 </template>

@@ -1,22 +1,15 @@
 <template>
 
+  <require from="../resources/elements/blog-post"></require>
 
+  <div class="blog-post" repeat.for="post of myPostPreviews">
+    <blog-post post.bind="post">
 
-        <div class="blog-post" repeat.for="post of myPostPreviews">
-          <h2 class="blog-post-title">${post.title}</h2>
-          <p class="blog-post-meta">${post.createdAt}
-            <br> created by
-            <a href="#">${post.author}</a>
-            <p>tags: ${post.tags}</p>
-          </p>
-          <p>${post.body}</p>
-          <a route-href="route: post-view; params.bind: {slug: post.slug}">Continue Reading...</a>
-          <br>
-          <br>
-        </div>
-        <!-- /.blog-post -->
-
-
-
+    </blog-post>
+    <a route-href="route: post-view; params.bind: {slug: post.slug}">Continue Reading...</a>
+    <br>
+    <br>
+  </div>
+  <!-- /.blog-post -->
 
 </template>
