@@ -6,7 +6,7 @@
       <br> created by
       <a href="#">${post.author}</a>
       <br> tags:
-      <a class="badge badge-pill badge-info" href="#" repeat.for="tag of post.tags">${tag}</a>
+      <a class="badge badge-pill badge-info" route-href="route: tag-view; params.bind: {tag: tag}" repeat.for="tag of post.tags">${tag}</a>
     </p>
     <p>${post.body}</p>
   </div>
