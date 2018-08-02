@@ -5,6 +5,8 @@
     <p class="blog-post-meta">${post.createdAt | dateFormat}
       <br> created by
       <a href="#">${post.author}</a>
+      <br> tags:
+      <a class="badge badge-pill badge-info" href="#" repeat.for="tag of post.tags">${tag}</a>
     </p>
     <p>${post.body}</p>
   </div>

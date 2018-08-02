@@ -97,127 +97,93 @@
           <router-view></router-view>
 
           <nav class="blog-pagination">
-              <a class="btn btn-outline-primary" href="#">Older</a>
-              <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-            </nav>
-    
-          </div>
-          <!-- /.blog-main -->
+            <a class="btn btn-outline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+          </nav>
 
-    
-          <aside class="col-md-4 blog-sidebar">
-            <div class="p-3 mb-3 bg-light rounded">
-              <h4 class="font-italic">About</h4>
-              <p class="mb-0">Etiam porta
-                <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum
-                nulla sed consectetur.</p>
-            </div>
-
-                <div class="p-3 mb-3 bg-light rounded">
-                    <h4>Tags</h4>
-                      <span class="badge badge-pill badge-info" repeat.for="tag of myTags">${tag}
-                        </span>
-                    </a>
-                </div>
-            
-    
-            <div class="p-3">
-              <h4 class="font-italic">Archives</h4>
-              <ol class="list-unstyled mb-0">
-                <li>
-                  <a href="#">March 2014</a>
-                </li>
-                <li>
-                  <a href="#">February 2014</a>
-                </li>
-                <li>
-                  <a href="#">January 2014</a>
-                </li>
-                <li>
-                  <a href="#">December 2013</a>
-                </li>
-                <li>
-                  <a href="#">November 2013</a>
-                </li>
-                <li>
-                  <a href="#">October 2013</a>
-                </li>
-                <li>
-                  <a href="#">September 2013</a>
-                </li>
-                <li>
-                  <a href="#">August 2013</a>
-                </li>
-                <li>
-                  <a href="#">July 2013</a>
-                </li>
-                <li>
-                  <a href="#">June 2013</a>
-                </li>
-                <li>
-                  <a href="#">May 2013</a>
-                </li>
-                <li>
-                  <a href="#">April 2013</a>
-                </li>
-              </ol>
-            </div>
-    
-            <div class="p-3">
-              <h4 class="font-italic">Elsewhere</h4>
-              <ol class="list-unstyled">
-                <li>
-                  <a href="#">GitHub</a>
-                </li>
-                <li>
-                  <a href="#">Twitter</a>
-                </li>
-                <li>
-                  <a href="#">Facebook</a>
-                </li>
-              </ol>
-            </div>
-          </aside>
-          <!-- /.blog-sidebar -->
-    
         </div>
-        <!-- /.row -->
-    
-      </main>
-          <!-- /.container -->
+        <!-- /.blog-main -->
 
-          <footer class="blog-footer">
-            <p>Blog template built for
-              <a href="https://getbootstrap.com/">Bootstrap</a> by
-              <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            <p>
-              <a href="#">Back to top</a>
-            </p>
-          </footer>
 
-          <!-- Bootstrap core JavaScript
+        <aside class="col-md-4 blog-sidebar">
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">About</h4>
+            <p class="mb-0">Etiam porta
+              <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum
+              nulla sed consectetur.</p>
+          </div>
+
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4>Tags</h4>
+
+            <a class="badge badge-pill badge-info" route-href="route: tag-view; params.bind: {tag: tag}" repeat.for="tag of myTags">${tag} </a>
+          </div>
+
+
+          <div class="p-3">
+            <h4 class="font-italic">Archives</h4>
+            <a route-href="route: archive-view; params.bind: {archive: archive}" repeat.for="archive of myArchives">
+              <span class="badge">${archive}
+
+            </a>
+            </span>
+          </div>
+
+          <div class="p-3 mb-3 bg-light rounded">
+            <h4 class="font-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li>
+                <a href="#">GitHub</a>
+              </li>
+              <li>
+                <a href="#">Twitter</a>
+              </li>
+              <li>
+                <a href="#">Facebook</a>
+              </li>
+            </ol>
+          </div>
+        </aside>
+        <!-- /.blog-sidebar -->
+
+      </div>
+      <!-- /.row -->
+
+    </main>
+    <!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for
+        <a href="https://getbootstrap.com/">Bootstrap</a> by
+        <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
       ================================================== -->
-          <!-- Placed at the end of the document so the pages load faster -->
-          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-          <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-          <script src="../../assets/js/vendor/popper.min.js"></script>
-          <script src="../../dist/js/bootstrap.min.js"></script>
-          <script src="../../assets/js/vendor/holder.min.js"></script>
-          <script>
-            Holder.addTheme('thumb', {
-              bg: '#55595c',
-              fg: '#eceeef',
-              text: 'Thumbnail'
-            });
-          </script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
 
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="250" viewBox="0 0 200 250" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
-            <defs>
-              <style type="text/css"></style>
-            </defs>
-            <text x="0" y="13" style="font-weight:bold;font-size:13pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text>
-          </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="250" viewBox="0 0 200 250" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+      <defs>
+        <style type="text/css"></style>
+      </defs>
+      <text x="0" y="13" style="font-weight:bold;font-size:13pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text>
+    </svg>
   </body>
 </template>
