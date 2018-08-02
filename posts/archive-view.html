@@ -1,3 +1,11 @@
 <template>
-  <h1>${message}</h1>
-</template>
+    <require from="./../resources/elements/blog-post"></require>
+    <div class="alert alert-dark">${archive}</div>
+  
+    <div repeat.for="post of posts">
+      <blog-post post.bind="post"></blog-post>
+      <a route-href="route: post-view; params.bind: {slug: post.slug}"></a>
+  
+    </div>
+  </template>
+  

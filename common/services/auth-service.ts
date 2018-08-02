@@ -7,7 +7,7 @@ export class AuthService {
   constructor() {
     this.delay = 100;
     this.currentUser = null;
-    this.users = ['Nick Shallee', 'Jane Doe'];
+    this.users = ['Javier Advani', 'Jane Doe'];
   }
 
   login(name) {
